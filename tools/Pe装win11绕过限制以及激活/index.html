@@ -20,13 +20,14 @@
     var CONFIG = {"hostname":"blogs.huangtang.link","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Pe装win11绕过限制以及激活昨天迎来了2022年的第一场雪，街上没啥顾客。我也不用天天守着玩具吆喝了，因此特批休息一下，于是我抽空把win10 重装一下。就在我按照以前pe装win的流程安装时，突然弹出我不能安装！！！ !&lt;pe提示无法安装&gt;(Pe装win11绕过限制以及激活.assets&#x2F;pe提示无法安装-16428589136521.png) 怎么办？于是我又开始研究（一番检索">
+  <meta name="description" content="Pe装win11绕过限制以及激活昨天迎来了2022年的第一场雪，街上没啥顾客。我也不用天天守着玩具吆喝了，因此特批休息一下，于是我抽空把win10 重装一下。就在我按照以前pe装win的流程安装时，突然弹出我不能安装！！！  怎么办？于是我又开始研究（一番检索后，找到了可行的方案，于是分享一下） 绕过TPM限制和secure检查我们在这个提示错误的页面，调出注册表 按住shift+f10 输入re">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Pe装win11绕过限制以及激活">
 <meta property="og:url" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/index.html">
 <meta property="og:site_name" content="HuangTangBlogs">
-<meta property="og:description" content="Pe装win11绕过限制以及激活昨天迎来了2022年的第一场雪，街上没啥顾客。我也不用天天守着玩具吆喝了，因此特批休息一下，于是我抽空把win10 重装一下。就在我按照以前pe装win的流程安装时，突然弹出我不能安装！！！ !&lt;pe提示无法安装&gt;(Pe装win11绕过限制以及激活.assets&#x2F;pe提示无法安装-16428589136521.png) 怎么办？于是我又开始研究（一番检索">
+<meta property="og:description" content="Pe装win11绕过限制以及激活昨天迎来了2022年的第一场雪，街上没啥顾客。我也不用天天守着玩具吆喝了，因此特批休息一下，于是我抽空把win10 重装一下。就在我按照以前pe装win的流程安装时，突然弹出我不能安装！！！  怎么办？于是我又开始研究（一番检索后，找到了可行的方案，于是分享一下） 绕过TPM限制和secure检查我们在这个提示错误的页面，调出注册表 按住shift+f10 输入re">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/pe%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85-16428589136521.png">
 <meta property="og:image" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/shift_f10.png">
 <meta property="og:image" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/regedit.png">
 <meta property="og:image" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/%E8%B7%AF%E5%BE%84_%E5%BB%BA%E9%A1%B9.png">
@@ -43,11 +44,11 @@
 <meta property="og:image" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/%E5%AE%89%E8%A3%85%E5%AF%86%E9%92%A5.png">
 <meta property="og:image" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/2+3.png">
 <meta property="article:published_time" content="2022-01-22T05:26:12.000Z">
-<meta property="article:modified_time" content="2022-01-22T06:01:16.344Z">
+<meta property="article:modified_time" content="2022-01-22T06:08:41.450Z">
 <meta property="article:author" content="HuangTang">
 <meta property="article:tag" content="win11安装激活">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/shift_f10.png">
+<meta name="twitter:image" content="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/pe%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85-16428589136521.png">
 
 <link rel="canonical" href="http://blogs.huangtang.link/tools/Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB/">
 
@@ -191,7 +192,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2022-01-22 13:26:12 / Modified: 14:01:16" itemprop="dateCreated datePublished" datetime="2022-01-22T13:26:12+08:00">2022-01-22</time>
+              <time title="Created: 2022-01-22 13:26:12 / Modified: 14:08:41" itemprop="dateCreated datePublished" datetime="2022-01-22T13:26:12+08:00">2022-01-22</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -215,7 +216,7 @@
 
       
         <h1 id="Pe装win11绕过限制以及激活"><a href="#Pe装win11绕过限制以及激活" class="headerlink" title="Pe装win11绕过限制以及激活"></a>Pe装win11绕过限制以及激活</h1><p>昨天迎来了2022年的第一场雪，街上没啥顾客。我也不用天天守着玩具吆喝了，因此特批休息一下，于是我抽空把win10 重装一下。就在我按照以前pe装win的流程安装时，突然弹出我不能安装！！！</p>
-<p>!&lt;pe提示无法安装&gt;(Pe装win11绕过限制以及激活.assets/pe提示无法安装-16428589136521.png)</p>
+<p><img src="Pe%E8%A3%85win11%E7%BB%95%E8%BF%87%E9%99%90%E5%88%B6%E4%BB%A5%E5%8F%8A%E6%BF%80%E6%B4%BB.assets/pe%E6%8F%90%E7%A4%BA%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85-16428589136521.png" alt="pe提示无法安装"></p>
 <p>怎么办？于是我又开始研究（一番检索后，找到了可行的方案，于是分享一下）</p>
 <h2 id="绕过TPM限制和secure检查"><a href="#绕过TPM限制和secure检查" class="headerlink" title="绕过TPM限制和secure检查"></a>绕过TPM限制和secure检查</h2><p><strong>我们在这个提示错误的页面，调出注册表</strong></p>
 <p><strong>按住shift+f10</strong></p>
